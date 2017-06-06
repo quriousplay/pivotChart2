@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
+import { PivotChart } from '../lib/chart/pivotChart';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'pivot chart poc';
+
+  pivotChart: PivotChart;
+
+  constructor(el: ElementRef) {
+    this.pivotChart = new PivotChart(el);
+  }
+
+  ngOnInit(): void {
+
+  }
 }

@@ -5,9 +5,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { PivotChart } from '../lib/chart/pivotChart';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PivotChart
   ],
   imports: [
     BrowserModule,
